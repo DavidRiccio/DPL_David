@@ -39,7 +39,7 @@ Creamos organizaciones
 <img src="/GIT/img/captura12.png">
 
 Creamos los equipos
-<img src="/GIT/img/captura13png">
+<img src="/GIT/img/captura13.pngpng">
 <img src="/GIT/img/captura14.png">
 
 <img src="/GIT/img/captura15.png">
