@@ -26,3 +26,13 @@ Los comandos utilizados son
  ```
 
 <img src="/GIT/img/captura2.png">
+
+## USO SOCIAL Y TABLA
+
+<img src="/GIT/img/captura3.png">
+
+| Alumno | Github |
+|----------|----------|
+| Nichole   |  [Nichole](https://github.com/nicholelouis)  |
+| Cesar | [Cesar](https://github.com/Cesardrom)  |
+| Isaias   | [Isaias](https://github.com/IsaiasTolP) |
