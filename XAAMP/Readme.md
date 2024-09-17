@@ -11,3 +11,13 @@
 <p align="center"><img src="/XAAMP/img/captura4.png"></p>
 - Nos meteremos en  el panel de control e iniciaremos todos los modulos.
 <p align="center"><img src="/XAAMP/img/captura5.png"></p>
+- Tambien podemos iniciar a traves de comandos.
+<p align="center"><img src="/XAAMP/img/captura6.png"></p>
+- Escribimos en el navegador el siguiente comando.
+```
+http://localhost
+```
+- Si vemos esto es que funciona
+
+<p align="center"><img src="/XAAMP/img/captura7.png"></p>
+
