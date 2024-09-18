@@ -4,7 +4,7 @@
 ## Poner contraseña
 Entramos a PHPMyAdmin
 <p align="center"><img src="/XAAMP/securizar/img/2024-09-18_15-12.png"></p>
-<p align="center"><img src="/img/captura10.png"></p>
+<p align="center"><img src="/XAAMP/securizar//img/captura10.png"></p>
 
 Le damos a cuentas de usuarios
 <p align="center"><img src="/XAAMP/securizar//img/captura11.png"></p>
