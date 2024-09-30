@@ -13,4 +13,4 @@ header( "location: pagina3.php?name=" .$_GET["name"]);
 
  Y esto nos lleva al siguiente enlace 
 
-<p align="center"><img src="/PHP/tarea2/img/Redireccion12.png"</p>
+<p align="center"><img src="/PHP/tarea2/img/Redireccion2.png"</p>
