@@ -7,6 +7,6 @@
 </head>
 <body>
     
-    <a href="pagina2.php?name=alex">Redirección</a>
+    <a href="pagina2.php?name=david">Redirección</a>
 </body>
 </html>
