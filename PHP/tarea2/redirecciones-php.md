@@ -8,9 +8,9 @@ El fichero pagina2.php contiene
  ```
 header( "location: pagina3.php?name=" .$_GET["name"]);
 ```
-<p align="center"><img src="/PHP/tarea2/img/Redireccion1.png" width="200px" height="200px"/></p>
+<p align="center"><img src="/PHP/tarea2/img/Redireccion1.png" width="500px" height="200px"/></p>
  para realizar la redirección hacia la pagina3.php con todos los datos que queramos.
 
  Y esto nos lleva al siguiente enlace 
 
-<p align="center"><img src="/PHP/tarea2/img/Redireccion2.png" width="200px" height="200px" /></p>
+<p align="center"><img src="/PHP/tarea2/img/Redireccion2.png" width="500px" height="200px" /></p>
