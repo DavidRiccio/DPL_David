@@ -8,9 +8,9 @@ Creamos el repositorio
 
 <p align="center"><img src="/GIT/tarea1.3/2.png"/></p>
 
-Clonamos el repo a nuestro pc
+Clonamos el repositorio a nuestro pc
 
-<p align="center"><img src="/GIT/tarea1.3/3.png"widht="400px" height="200px"/></p>
+<p align="center"><img src="/GIT/tarea1.3/3.png"/></p>
 <p align="center"><img src="/GIT/tarea1.3/4.png" widht="400px" height="200px"/></p>
 
 Creamos el otro proyecto y lo copiamos en el repositorio 
