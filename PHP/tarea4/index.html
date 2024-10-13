@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Gestión de usuarios</h1>
+    <h2>Insertar usuario</h2>
+    <form action="index.php" method="post">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="email" required>
+        <button type="submit" name="insert">Crear usuario</button>
+    </form>
+
+    <h2>Mostrar usuarios</h2>
+    <form action="index.php" method="post">
+        <button type="submit" name="select" id="selectButton">Mostrar usuarios</button>
+    </form>
+
+    <h2>Actualizar usuario</h2>
+    <form action="index.php" method="post">
+        <input type="number" name="userId" placeholder="User ID" required>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="email" required>
+        <button type="submit" name="update">Actualizar usuario</button>
+    </form>
+
+    <h2>Borrar usuario</h2>
+    <form action="index.php" method="post">
+        <input type="number" name="userId" placeholder="User ID" required>
+        <button type="submit" name="delete">Borrar usuario</button>
+    </form>
+</body>
+</html>
