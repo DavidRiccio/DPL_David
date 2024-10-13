@@ -36,8 +36,8 @@ if (isset($_POST['insert'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
 
-    $sql = "INSERT INTO users (nombre, email) VALUES ('$name', '$email')"; // La sentencia SQL de inserción
-    if (mysqli_query($conn, $sql) === TRUE) { // Es recomendable que verifiquemos si hay errores
+    $sql = "INSERT INTO users (nombre, email) VALUES ('$name', '$email')"; 
+    if (mysqli_query($conn, $sql) === TRUE) { 
         echo "Nuevo usuario creado exitosamente";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
