@@ -17,7 +17,7 @@ if (isset($_POST['insert'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
 
-    $sql = "INSERT INTO users (nombre, email) VALUES ('$name', '$email')"; // La sentencia SQL de inserción
+    $sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')"; // La sentencia SQL de inserción
     if (mysqli_query($conn, $sql) === TRUE) { // Es recomendable que verifiquemos si hay errores
         echo "Nuevo usuario creado exitosamente";
     } else {
@@ -32,7 +32,7 @@ if (isset($_POST['select'])) {
 
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            echo "ID: " . $row["id"]. " - Nombre: " . $row["nombre"]. " - Email: " . $row["email"]. "<br>";
+            echo "ID: " . $row["id"]. " - Nombre: " . $row["name"]. " - Email: " . $row["email"]. "<br>";
         }
         echo '<br><button onclick="window.location.href=\'index.html\'">Volver al administrador de consultas</button>';
     } else {
@@ -46,7 +46,7 @@ if (isset($_POST['update'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
 
-    $sql = "UPDATE users SET nombre='$name', email='$email' WHERE id=$userId"; // La sentencia SQL de actualizción
+    $sql = "UPDATE users SET name='$name', email='$email' WHERE id=$userId"; // La sentencia SQL de actualizción
     if (mysqli_query($conn, $sql) === TRUE) {
         echo "Usuario actualizado exitosamente";
         echo '<br><button onclick="window.location.href=\'index.html\'"></button>';
