@@ -16,13 +16,21 @@ if ($conn->connect_error) {
 if (isset($_POST['insert'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
+    $password = $_POST['password'];
 
-    $sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')"; // La sentencia SQL de inserción
-    if (mysqli_query($conn, $sql) === TRUE) { // Es recomendable que verifiquemos si hay errores
+    // Generar el hash de la contraseña
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Agrega el punto y coma
+
+    // Usar una declaración preparada para evitar inyecciones SQL
+    $stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $name, $email, $hashed_password); // "sss" indica que son tres strings
+
+    if ($stmt->execute()) { // Ejecuta la declaración
         echo "Nuevo usuario creado exitosamente";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error; // Muestra el error si ocurre
     }
+    $stmt->close(); // Cierra la declaración
 }
 
 // Mostramos los usuarios
@@ -46,27 +54,35 @@ if (isset($_POST['update'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
 
-    $sql = "UPDATE users SET name='$name', email='$email' WHERE id=$userId"; // La sentencia SQL de actualizción
-    if (mysqli_query($conn, $sql) === TRUE) {
+    // Usar una declaración preparada para evitar inyecciones SQL
+    $stmt = $conn->prepare("UPDATE users SET name=?, email=? WHERE id=?");
+    $stmt->bind_param("ssi", $name, $email, $userId); // "ssi" indica que son dos strings y un entero
+
+    if ($stmt->execute()) {
         echo "Usuario actualizado exitosamente";
-        echo '<br><button onclick="window.location.href=\'index.html\'"></button>';
+        echo '<br><button onclick="window.location.href=\'index.html\'">Volver al administrador de consultas</button>';
     } else {
-        echo "Error actualizando usuario: " . $conn->error;
+        echo "Error actualizando usuario: " . $stmt->error;
     }
+    $stmt->close(); // Cierra la declaración
 }
 
 // Borramos el usuario
 if (isset($_POST['delete'])) {
     $userId = $_POST['userId'];
 
-    $sql = "DELETE FROM users WHERE id=$userId"; // La sentencia SQL de eliminación
-    if (mysqli_query($conn, $sql) === TRUE) {
+    // Usar una declaración preparada para evitar inyecciones SQL
+    $stmt = $conn->prepare("DELETE FROM users WHERE id=?");
+    $stmt->bind_param("i", $userId); // "i" indica que es un entero
+
+    if ($stmt->execute()) {
         echo "Usuario borrado exitosamente";
-        echo '<br><button onclick="window.location.href=\'index.html\'"></button>';
+        echo '<br><button onclick="window.location.href=\' index.html\'">Volver al administrador de consultas</button>';
     } else {
-        echo "Error borrando usuario: " . $conn->error;
+        echo "Error borrando usuario: " . $stmt->error;
     }
+    $stmt->close(); // Cierra la declaración
 }
 
-mysqli_close();
+mysqli_close($conn); // Cierra la conexión
 ?>
