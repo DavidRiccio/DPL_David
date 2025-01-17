@@ -16,14 +16,14 @@ MariaDB es un reemplazo directo para MySQL. Escribe el siguiente comando para re
 
 sudo apt install mariadb-server mariadb-client 
 
-<img src="./img/1.png"/>
+<p align="center"><img src="./img/1.png"/><p/>
 
 Después de que se instale, el servidor MariaDB debe ejecutarse automáticamente.
 
 Inserta el comando utilizado para comprobar el estado del
 
 servidor y una captura de pantalla
-<img src="./img/2.png"/>
+<p align="center"><img src="./img/2.png"/><p/>
 
 
 Para permitir que MariaDB se inicie automáticamente en el momento del arranque, debemos ejecutar:
@@ -39,7 +39,7 @@ servidor y una captura de pantalla
 Ejecutamos un script de seguridad posterior a la instalación, por medio del siguiente comando:
 
 sudo mysql_secure_installation
-<img src="./img/3.png"/>
+<p align="center"><img src="./img/3.png"/><p/>
 
 
 Cuando nos solicite que escribamos la contraseña root de MariaDB, pulsa Introya que la contraseña root aún no está configurada. Después escribe tu contraseña de rootpara el servidor MariaDB.
@@ -47,8 +47,8 @@ Cuando nos solicite que escribamos la contraseña root de MariaDB, pulsa Introya
 A continuación podemos pulsar Intro para responder todas las preguntas restantes. Esto eliminará el usuario anónimo, deshabilitará el inicio de sesión raíz remoto y eliminará la base de datos de prueba.
 
 Inserta capturas de pantalla de todo el proceso
-<img src="./img/4.png"/>
-<img src="./img/5.png"/>
+<p align="center"><img src="./img/4.png"/><p/>
+<p align="center"><img src="./img/5.png"/><p/>
 
 
 Por defecto, el paquete MariaDB en Ubuntu usa unix_socket para autenticar el inicio de sesión del usuario.
@@ -62,7 +62,7 @@ Prueba el acceso a la base de datos con la nueva contraseña.
 Inserta  comando utilizado y captura de pantalla
 
 Crea un nuevo usuario en la base de datos llamado developer con la contraseña 5t6y7u8i.
-<img src="./img/7.png"/>
+<p align="center"><img src="./img/7.png"/><p/>
 
 
 Inserta los comandos utilizados y las capturas de pantalla correspondientes.
@@ -75,7 +75,7 @@ Vamos a escribir el siguiente comando para instalar PHP y algunos módulos PHP c
 
 sudo apt install php7.4 libapache2-mod-php7.4 php7.4-mysql php-common php7.4-cli php7.4-common php7.4-json php7.4-opcache php7.4-readline
 
-<img src="./img/6.png"/>
+<p align="center"><img src="./img/6.png"/><p/>
 
 
 Ahora tendremos que activar el módulo Apache php8 y reiniciar el servidor web Apache.
