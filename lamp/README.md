@@ -121,6 +121,8 @@ sudo a2enconf php7.4-fpm
 
 Después debemos reiniciar Apache:
 
+<p align="center"><img src="./img/Captura desde 2025-01-22 15-39-38.png"/><p/>
+
 sudo systemctl restart apache2
 
 Ahora, si actualizas la página info.php en el navegador, encontrarás que la API del servidor ha cambiado de Apache 2.0 Handler a FPM/FastCGI, lo que significa que el servidor web Apache pasará las solicitudes de PHP a PHP-FPM.
